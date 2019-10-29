@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Graph Viewer via D3">
+    <meta name="author" content="Emad Aghajani">
+    <link rel="stylesheet" type="text/css" href="res/style.css">
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+
+<body>
+    <div class="settingBox floatleft">
+        Select JSON file: <input type="file" id="fileInput-json-graph" accept=".json">
+        <br>
+        <button onclick="RenderInputFile()">Refresh Viewer</button>
+    </div>
+    
+    <div class="settingBox controllersBox floatleft">
+        <div class="floatleft">
+            <span>
+                Links Threshold: <code id="sliderCurrentValue">????</code>
+                <span class="">
+                    <button onclick="MoveSliderProgrammatically(-1)">-</button>
+                    <button onclick="MoveSliderProgrammatically(+1)">+</button>
+                </span>
+            </span>
+            <span style="margin-left: 40pt; float: right;">
+                <input type="checkbox" id="HidelonelyNodesCheckbox" unchecked>
+                <label for="HidelonelyNodesCheckbox">Hide Lonely Nodes</label>
+            </span>
+        </div>
+        <div>
+            <span>
+                <span>
+                    <label for="slider_id" class=""><code id="slider_min_label">min</code></label>
+                    <input class="slider slider-wrapper" type="range" min="0" max="0" step="0.1" value="0" id="slider_id">
+                    <label for="slider_id" class=""><code id="slider_max_label">max</code></label>
+                </span>
+                <span>
+                    <select id="nodeTypes_cb" style="float: right;">
+                        <option>Select...</option>
+                    </select>
+                </span>
+            </span>
+        </div>
+    </div>
+    <div class="statusBox">
+            #Nodes on display: <code id="nNodesOnDisplay">...</code>
+    </div>
+    <svg class="svg-viewer"></svg>
+    
+    <span style="margin-left: 10pt;">
+        <input type="checkbox" id="ReforceAfterDrag" unchecked>
+        <label for="ReforceAfterDrag">Reforce After Drag</label>
+    </span>
+    
+    <script src="res/standardizer.js"></script>
+    <script src="res/ui.js"></script>
+    <script src="res/logic.js"></script>
+    <script>
+        // Script starts from here
+        InitializeSlider();
+        InitializeCheckbox();
+        InitializeCombobox();
+        SetAllContollersDisabled(true);
+    </script>
+</body>
+</html>

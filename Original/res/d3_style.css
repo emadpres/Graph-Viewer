@@ -1,0 +1,14 @@
+.d3_links_defaul_style line {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.d3_nodes_defaul_style circle {
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.d3_nodes_defaul_style rect {
+    stroke: black;
+    stroke-width: 1px;
+}

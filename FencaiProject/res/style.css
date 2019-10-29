@@ -1,0 +1,40 @@
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.settingBox {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: lightgrey;
+    border: solid black 1pt;
+    height: 45px;
+    margin: 2pt;
+    padding: 2pt;
+}
+
+.statusBox {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(63, 185, 32);
+    border: solid black 1pt;
+    width: 180px;
+    margin: 5pt;
+    padding: 5pt;
+}
+
+.slider-wrapper {
+    vertical-align: middle;
+}
+
+.svg-viewer {
+    display: block;
+    background-color: skyblue;
+    border-style: groove;
+    border: 1px;
+    height: 650px;
+    width: 1150px;
+}

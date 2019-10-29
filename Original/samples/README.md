@@ -2,7 +2,7 @@
 If your data is not following the structure below or misses some keys (like "title"), Update "res/standardizer.js" to standardize your json to match the template below.
 
 ## Standard Input Json
-{
+```{
 	"nodes": [
 		{
 			"id": 1,
@@ -45,4 +45,4 @@ If your data is not following the structure below or misses some keys (like "tit
 			"title": "Conncetion between 2 and 3"
 		}
 	]
-}
+}```
